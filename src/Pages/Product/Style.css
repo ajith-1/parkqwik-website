@@ -1,0 +1,111 @@
+.parking {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .parking .div {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 1440px;
+    height: 5404px;
+    position: relative;
+  }
+
+ .parking .group-7 {
+    position: absolute;
+    width: 415px;
+    height: 313px;
+    top: 142px;
+    left: 826px;
+    transform: rotate(-0.21deg);
+  }
+
+  .parking .group-14 {
+    position: absolute;
+    width: 44px;
+    height: 151px;
+    top: 0;
+    left: 116px;
+    transform: rotate(0.21deg);
+  }
+
+  .parking .group-8 {
+    position: absolute;
+    width: 124px;
+    height: 82px;
+    top: 208px;
+    left: 0;
+    transform: rotate(0.21deg);
+  }
+  .parking .overlap-15 {
+    position: absolute;
+    width: 319px;
+    height: 314px;
+    top: 0;
+    left: 96px;
+  }
+  .parking .group-9 {
+    position: absolute;
+    width: 13px;
+    height: 7px;
+    top: 233px;
+    left: 189px;
+    transform: rotate(0.21deg);
+  }
+
+  .parking .group-10 {
+    position: absolute;
+    width: 21px;
+    height: 12px;
+    top: 231px;
+    left: 185px;
+    transform: rotate(0.21deg);
+  }
+  
+  .parking .group-11 {
+    position: absolute;
+    width: 123px;
+    height: 93px;
+    top: 112px;
+    left: 0;
+    transform: rotate(0.21deg);
+  }
+  
+  .parking .group-12 {
+    position: absolute;
+    width: 123px;
+    height: 93px;
+    top: 150px;
+    left: 65px;
+    transform: rotate(0.21deg);
+  }
+  
+  .parking .group-13 {
+    position: absolute;
+    width: 123px;
+    height: 93px;
+    top: 221px;
+    left: 196px;
+    transform: rotate(0.21deg);
+  }
+  
+  .parking .group-14 {
+    position: absolute;
+    width: 44px;
+    height: 151px;
+    top: 0;
+    left: 116px;
+    transform: rotate(0.21deg);
+  }
+  
+  .parking .group-15 {
+    position: absolute;
+    width: 133px;
+    height: 64px;
+    top: 245px;
+    left: 144px;
+    transform: rotate(0.21deg);
+  }
