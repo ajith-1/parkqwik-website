@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './Parking.css';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -6,195 +6,138 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Phone } from '@mui/icons-material';
 import { Container, Stack } from '@mui/material';
-import { styled } from '@mui/system';
+import { ProductPerks } from '../../Assests/Data';
+import { ParkingService } from '../../Assests/Data';
+import Carousel from '../../Components/Style/Carousel';
+import OurProduct from '../../Components/Style/OurProduct';
+import Download from '../../Components/Style/Download';
+import { Question } from '../../Assests/Data';
+import Expand from '../../Components/Style/Expand';
+import { BoxStyle, Heading } from '../../Components/Style/Style';
+import FeedCarousel from '../../Components/Style/FeedCarousel';
 
 
-
-const StackStyle = styled('Box')({
-  display:'flex',
-  flexDirection: 'row',
-  gap: '46px',
-  '@media(max-width:1000px)': {
-    flexDirection: 'column',
-    gap: '10px',
-  }
-})
-
-const Box1=styled('Box')({
-  display:'flex',
-  alignItems:'flex-start',
-  justifyContent:'flex-start',
-})
 
 function Parking() {
+
+  useEffect(()=>{
+    window.scroll(0,0);
+  },[])
+
   return (
     <>
-    <Container>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <Box maxWidth={'550px'} width={'100%'} height={'auto'}>
-            <Typography variant='h3'>Revolutionize Your Parking Journey with Our Expertise</Typography>
-            <Typography variant='h6' my={2}>Our team will assist you throughout the reservation process</Typography>
-            <Button sx={{ bgcolor: '#1A9E75', color: '#ffff', px: 2, py: 1, width: '200px', borderRadius: '15px' }} startIcon={<Phone />}>+91 842 842 88 33</Button>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <Box>
-            <img src='/images/wavy-bus.png' width={'350px'} height={'350px'} />
-          </Box>
-        </Grid>
-      </Grid>
-
-      </Container>
-      
-      <Box sx={{ mt: '117px' }}>
-        <Typography variant='h3' textAlign={'center'}>We Offer Parking Services At</Typography>
-      </Box>
-
-
-      <Box sx={{ mt: '94px' }}>
       <Container>
-        <Typography variant='h3' textAlign={'center'}>Parking Solutions</Typography>
-
-
-        <Grid container spacing={3}>
+        <Grid container spacing={3} mt={2}>
           <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box maxWidth={'550px'} width={'100%'} height={'auto'}>
-
-              <Box className='Box'></Box>
-              <Typography variant='h4' sx={{ px: 2, py: 1, borderRadius: '8px', bgcolor: '#F0FFFA', width: '290px', border: '2px dotted #F0FFFA' }}>Nearby Parking</Typography>
-
-              <Typography variant='h6' my={2}>Discover nearby parking options with our hourly, weekly, daily, and monthly plans. No matter where you're headed, our team is here to assist you in finding the perfect parking spot near your location, whether it's at apartments, shops, malls, events, and more.</Typography>
+              <Typography variant='h3'>Revolutionize Your Parking Journey with Our Expertise</Typography>
+              <Typography variant='h6' my={2}>Our team will assist you throughout the reservation process</Typography>
+              <Button 
+              disableElevation 
+              variant="contained" 
+              color='success'
+              sx={{color: '#ffff', px: 2, py: 1, width: '200px', borderRadius: '15px' }} 
+              startIcon={<Phone />}>
+              +91 842 842 88 33
+              </Button>
             </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box>
-              <img src='/images/wavy-bus.png' width={'350px'} height={'350px'} />
+              <img src='/images/car-parking.svg' width={'100%'} height={'auto'}/>
             </Box>
           </Grid>
         </Grid>
+      </Container>
 
-
-        <Grid container spacing={3} sx={{ flexWrap: 'wrap-reverse' }}>
-          <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Box>
-              <img src='/images/wavy-bus.png' width={'350px'} height={'350px'} />
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Box maxWidth={'550px'} width={'100%'} height={'auto'}>
-
-              <Box className='Box'></Box>
-              <Typography variant='h4' sx={{ px: 2, py: 1, borderRadius: '8px', bgcolor: '#F0FFFA', width: '290px', border: '2px dotted #F0FFFA' }}>Nearby Parking</Typography>
-
-              <Typography variant='h6' my={2}>Discover nearby parking options with our hourly, weekly, daily, and monthly plans. No matter where you're headed, our team is here to assist you in finding the perfect parking spot near your location, whether it's at apartments, shops, malls, events, and more.</Typography>
-            </Box>
-          </Grid>
-        </Grid>
-
-
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Box maxWidth={'550px'} width={'100%'} height={'auto'}>
-
-              <Box className='Box'></Box>
-              <Typography variant='h4' sx={{ px: 2, py: 1, borderRadius: '8px', bgcolor: '#F0FFFA', width: '290px' }}>Nearby Parking</Typography>
-
-              <Typography variant='h6' my={2}>Discover nearby parking options with our hourly, weekly, daily, and monthly plans. No matter where you're headed, our team is here to assist you in finding the perfect parking spot near your location, whether it's at apartments, shops, malls, events, and more.</Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Box>
-              <img src='/images/wavy-bus.png' width={'350px'} height={'350px'} />
-            </Box>
-          </Grid>
-        </Grid>
-        </Container>
-        {/* ---------------------------------------------------------------------------------- */}
-
-        <Box sx={{ width: '100%', minHeight: '596px', height: 'auto', bgcolor: '#F0FFFA', mt: 2, py:4 }}>
-          <Container>
-            <Typography variant='h3' mt='3' textAlign={'center'}>Our Product Perks</Typography>
-
-            <Grid container spacing={4} mt={'36px'}>
-              <Grid item sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-               <StackStyle>
-                  <Box1 >
-                    <Typography variant='h4' sx={{ color: '#1B9E76', }}>01</Typography>
-                  </Box1>
-                  <Stack direction='row' gap='10px' mt={'47px'} >
-                    <img src='/images/reservation.svg' />
-                    <Stack direction='column'>
-                      <Typography sx={{ fontSize: '30px', color: '#1B9E76' }}>Faster Booking</Typography>
-                      <Typography variant='h6' width={'236px'}>You can book parking space in just a few steps</Typography>
-                    </Stack>
-                  </Stack>
-                </StackStyle>
-              </Grid>
+      {/* -----------------------parking services----------------------- */}
+      <BoxStyle sx={{ mt: '87px', flexDirection: 'column' }}>
+          <Heading sx={{mb:'40px'}}>Our Products</Heading>
+          <Carousel item={ParkingService} color={'#1A9E75'}/>
+        </BoxStyle>
 
 
 
-              <Grid item sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-               <StackStyle>
-                  <Box1 >
-                    <Typography variant='h4' sx={{ color: '#1B9E76', }}>02</Typography>
-                  </Box1>
-                  <Stack direction='row' gap='10px' mt={'47px'}>
-                    <img src='/images/reservation.svg' />
-                    <Stack direction='column'>
-                      <Typography sx={{ fontSize: '30px', color: '#1B9E76' }}>Faster Booking</Typography>
-                      <Typography variant='h6' width={'236px'}>You can book parking space in just a few steps</Typography>
-                    </Stack>
-                  </Stack>
-                </StackStyle>
-              </Grid>
+      <Box sx={{ mt: '94px',p:1}}>
+        <Container>
+          <Typography variant='h3' textAlign={'center'} mb={5}>Parking Solutions</Typography>
 
 
+          <Grid container spacing={3} mt={4}>
+            <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <Box maxWidth={'550px'} width={'100%'} height={'auto'}>
 
+                <Box className='Box'></Box>
+                <Typography variant='h4' sx={{ px: 2, py: 1, borderRadius: '8px', bgcolor: '#F0FFFA', width: '290px', border: '2px dotted #F0FFFA' }}>Nearby Parking</Typography>
 
-              <Grid item sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-               <StackStyle>
-                  <Box1 >
-                    <Typography variant='h4' sx={{ color: '#1B9E76', }}>03</Typography>
-                  </Box1>
-                  <Stack direction='row' gap='10px' mt={'47px'}>
-                    <img src='/images/reservation.svg' />
-                    <Stack direction='column'>
-                      <Typography sx={{ fontSize: '30px', color: '#1B9E76' }}>Faster Booking</Typography>
-                      <Typography variant='h6' width={'236px'}>You can book parking space in just a few steps</Typography>
-                    </Stack>
-                  </Stack>
-                </StackStyle>
-              </Grid>
-
-
-
-              <Grid item sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-               <StackStyle>
-                  <Box1 >
-                    <Typography variant='h4' sx={{ color: '#1B9E76', }}>04</Typography>
-                  </Box1>
-                  <Stack direction='row' gap='10px' mt={'47px'}>
-                    <img src='/images/reservation.svg' />
-                    <Stack direction='column'>
-                      <Typography sx={{ fontSize: '30px', color: '#1B9E76' }}>Faster Booking</Typography>
-                      <Typography variant='h6' width={'236px'}>You can book parking space in just a few steps</Typography>
-                    </Stack>
-                  </Stack>
-                </StackStyle>
-              </Grid>
-
-
-              
-
-             
-
+                <Typography variant='h6' my={2}>Discover nearby parking options with our hourly, weekly, daily, and monthly plans. No matter where you're headed, our team is here to assist you in finding the perfect parking spot near your location, whether it's at apartments, shops, malls, events, and more.</Typography>
+              </Box>
             </Grid>
-          </Container>
+            <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <Box>
+                <img src='/images/car-location.png' width={'100%'} height={'auto'} />
+              </Box>
+            </Grid>
+          </Grid>
 
-        </Box>
+
+          <Grid container spacing={3} sx={{ flexWrap: 'wrap-reverse',mt:4 }}>
+            <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <Box>
+                <img src='/images/car-ev-charge.png' width={'100%'} height={'auto'} />
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <Box maxWidth={'550px'} width={'100%'} height={'auto'}>
+
+                <Box className='Box'></Box>
+                <Typography variant='h4' sx={{ px: 2, py: 1, borderRadius: '8px', bgcolor: '#F0FFFA', width: '290px', border: '2px dotted #F0FFFA' }}>EV Parking</Typography>
+
+                <Typography variant='h6' my={2}>We provide dedicated spaces for EV parking where you can park, charge, and drive away, and repeat the
+                  same until your subscription ends. We offer hourly, daily,weekly, and monthly plans with enhanced security</Typography>
+              </Box>
+            </Grid>
+          </Grid>
 
 
+          <Grid container spacing={3} mt={4}>
+            <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <Box maxWidth={'550px'} width={'100%'} height={'auto'}>
+
+                <Box className='Box'></Box>
+                <Typography variant='h4' sx={{ px: 2, py: 1, borderRadius: '8px', bgcolor: '#F0FFFA', width: '290px' }}>Valet Parking</Typography>
+
+                <Typography variant='h6' my={2}>Elevate your parking experience with our Valet service. Whether you require parking for a brief visit or an extended stay, reserve your spot in advance and savor a smooth, contactless parking experience</Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <Box>
+                <img src='/images/car-valet-parking.png' width={'100%'} height={'auto'} />
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+
+        {/* ---------------------------------Product perks------------------------------------ */}
+       <OurProduct data={ProductPerks}/>
+       {/* -------------------happy customer------------------------------ */}
+       <BoxStyle sx={{ mt: '100px', flexDirection: 'column' }}>
+        <Heading>Our Happy Customers</Heading>
+        <FeedCarousel />
+      </BoxStyle>
+       {/* --------------------------Download------------------------ */}
+
+       <Download/>
+        {/* ---------------------FAQ--------------------- */}
+
+        <BoxStyle sx={{ my: '100px', }}>
+          <Stack direction={'column'}>
+            <Heading sx={{ mb: '10px', textAlign: 'center' }}>
+              Frequently Asked Questions
+            </Heading>
+            <Expand data={Question} />
+          </Stack>
+        </BoxStyle>
       </Box>
     </>
   )

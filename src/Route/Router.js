@@ -7,9 +7,8 @@ import About from '../Pages/About/About';
 import Parking from '../Pages/Parking/Parking';
 import Fastag from '../Pages/Fastag/Fastag';
 import Careers from '../Pages/Careers/Careers';
-import Product1 from '../Pages/Product/Product1';
-import Product2 from '../Pages/Product/Product2';
-import Login from '../Pages/Login/Login';
+import Product from '../Pages/Product/Product';
+import Contact from '../Pages/Contact/Contact';
 
 function Router() {
     return (
@@ -21,9 +20,8 @@ function Router() {
                 <Route path='/parking' element={<Parking />} />
                 <Route path='/fastag' element={<Fastag />} />
                 <Route path='/careers' element={<Careers />} />
-                <Route path='/product1' element={<Product1 />} />
-                <Route path='/product2' element={<Product2 />} />
-                <Route path='/login' element={<Login />} />
+                <Route path='/product' element={<Product />} />
+                <Route path='/contact' element={<Contact />} />
             </Routes>
             <Footer />
         </BrowserRouter>

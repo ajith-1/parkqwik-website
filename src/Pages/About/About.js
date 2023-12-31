@@ -1,19 +1,35 @@
-import React from 'react';
-import { BoxStyle } from '../../Components/Style/BoxStyle';
+import React, { useEffect } from 'react';
+import { BoxStyle, Heading } from '../../Components/Style/Style';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import { Media } from '../../Assests/Data';
 import { Question } from '../../Assests/Data';
 import Expand from '../../Components/Style/Expand';
+import Download from '../../Components/Style/Download';
+import FeedCarousel from '../../Components/Style/FeedCarousel';
+import Video from '../../Components/Video/Video';
+import './About.css';
 
 
 function About() {
+
+  useEffect(()=>{
+    window.scroll(0,0);
+  },[])
+
   return (
     <>
       {/* --------------------hero banner------------- */}
-      <BoxStyle sx={{backgroundImage: "url('/images/hero-image.png')", height: '448px' }}>
-        <Box textAlign={'center'} color={'#ffff'} sx={{ mt: '88px' }}>
+      <BoxStyle
+        sx={{
+          backgroundImage: "url('/images/hero-image.png')",
+          height: '448px',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat'
+        }}>
+        <Box textAlign={'center'} color={'#ffff'} sx={{ mt: '-98px' }}>
           <Typography variant='h4'>ParkQwik is India&apos;s No1 General & EV Parking Marketplace</Typography>
           <Typography variant='p'>We continuously strive to offer our customers the finest parking and car services solutions</Typography>
         </Box>
@@ -28,7 +44,20 @@ function About() {
 
       {/* -----------------customer----------------- */}
       <BoxStyle sx={{ mt: '75px', flexDirection: 'column' }} >
-        <Typography variant='h3'>What Our Customers Say</Typography>
+        <Typography variant='h3' textAlign={'center'}>What Our Customers Say</Typography>
+        <BoxStyle sx={{
+          backgroundImage: "url('/images/parkqwik.png')",
+          p: 2,
+          height: '323px',
+          width: '95%',
+          // witdh:'100%', 
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          mt: 6,
+        }}>
+          <Video className='position' />
+        </BoxStyle>
       </BoxStyle>
 
       {/* -----------------media----------------- */}
@@ -60,51 +89,15 @@ function About() {
           })}
         </BoxStyle>
       </BoxStyle>
+
       {/* -----------------------happy customer-------------- */}
-
       <BoxStyle sx={{ mt: '100px', flexDirection: 'column' }}>
-        <Typography variant='h3'>Our Happy Customers</Typography>
-        <BoxStyle sx={{ mt: '64px' }}>
-          <Typography variant='h3'> SLIDER</Typography>
-        </BoxStyle>
-
+        <Heading>Our Happy Customers</Heading>
+        <FeedCarousel />
       </BoxStyle>
       {/* --------------------Download------------------------ */}
-      <BoxStyle sx={{ flexWrap: 'wrap', mt: '150px', gap: '100px' }}>
-        <Stack direction={'column'}>
-          <Typography variant='h4' sx={{mb: '10px', fontWeight: '500' }}>
-            Download ParkQwik
-          </Typography>
-          <Typography variant='h6' sx={{ maxWidth: '480px', mb: '40px',p:1}}>
-            By downloading ParkQwik, you gain access to a world of seamless parking experiences and car services right at your fingertips.
-          </Typography>
 
-          <Stack direction={'row'} gap={'20px'} p={1}>
-            <BoxStyle sx={{ maxWidth: '192px', height: '68px', borderRadius: '10px', bgcolor: '#292929', color: '#ffff' }}>
-              <img src='/images/playstore-logo.svg' />
-              <Stack direction={'column'}>
-                <Typography variant='p' sx={{ fontSize: '12px' }}>Get it on</Typography>
-                <Typography variant='p' sx={{ fontSize: '18px' }}>Google Play</Typography>
-              </Stack>
-            </BoxStyle>
-            <BoxStyle sx={{ maxWidth: '192px', height: '68px', borderRadius: '10px', bgcolor: '#292929', color: '#ffff' }}>
-              <img src='/images/apple-logo.svg' />
-              <Stack direction={'column'}>
-                <Typography variant='p' sx={{ fontSize: '12px' }}>Download on the</Typography>
-                <Typography variant='p' sx={{ fontSize: '18px' }}>App Store</Typography>
-              </Stack>
-            </BoxStyle>
-          </Stack>
-        </Stack>
-        <Stack direction={'row'} p={1} >
-          <Box>
-            <img src='/images/app-front1.png' width='100%' maxWidth='312px' height='auto' />
-          </Box>
-          <Box sx={{ mt: '-36px', ml: '-40px' }}>
-            <img src='/images/app-front2.png' width='100%' maxWidth='317px' height='auto' />
-          </Box>
-        </Stack>
-      </BoxStyle>
+      <Download />
 
       {/* ---------------------FAQ--------------------- */}
 

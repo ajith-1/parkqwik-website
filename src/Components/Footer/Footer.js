@@ -1,6 +1,7 @@
 import React from 'react';
+import './Footer.css';
 import Grid from '@mui/material/Grid';
-import { BoxStyle } from '../Style/BoxStyle';
+import { BoxStyle } from '../Style/Style';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -23,8 +24,9 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 
 const Box2 = styled('Box')({
   display: 'flex',
-  alignItems: 'center',
+  alignItems: 'flex-start',
   justifyContent: 'flex-start',
+  gap:'7px'
 })
 
 const QuickLink = ['About Us', 'Blogs', 'Newsletters', 'Help & Support', 'Careers'];
@@ -44,11 +46,11 @@ function Footer() {
               </Stack>
               <Typography sx={{ fontSize: '16px', mt: '19px', width: '220px', fontWeight: 500 }}>The Complete Parking App and Car Services Solution</Typography>
               <Typography sx={{ fontSize: '20px', mt: '15px', fontWeight: 700 }}>Follow us</Typography>
-              <Stack direction={'row'} gap={'10px'}>
-                <FacebookIcon sx={{ fontSize: '28px', }} />
-                <TwitterIcon sx={{ fontSize: '28px', }} />
-                <InstagramIcon sx={{ fontSize: '28px', }} />
-                <LinkedInIcon sx={{ fontSize: '28px', }} />
+              <Stack direction={'row'} gap={'10px'} mt={1}>
+                <a href='https://www.facebook.com/parkqwik' target='-blank' rel='noopener noreferrer' className='link'><FacebookIcon sx={{ fontSize: '28px', }} /></a>
+                <a href='https://twitter.com/Parkqwik_India' target='-blank' rel='noopener noreferrer' className='link'><TwitterIcon sx={{ fontSize: '28px', }} /></a>
+                <a href='https://www.instagram.com/parkqwik_parkingmadeeasy/' target='-blank' rel='noopener noreferrer' className='link'><InstagramIcon sx={{ fontSize: '28px', }} /></a>
+                <a href='https://www.linkedin.com/company/92730296/admin/feed/posts/' target='-blank' rel='noopener noreferrer' className='link'><LinkedInIcon sx={{ fontSize: '28px', }} /></a>
               </Stack>
             </Stack>
           </Grid>
@@ -59,7 +61,7 @@ function Footer() {
               <Typography sx={{ fontSize: '20px', fontWeight: 700, mb: '19px' }}>Quick Links</Typography>
               {QuickLink.map((item) => {
                 return (
-                  <Typography sx={{ fontSize: '16px', mb: '6px', fontWeight: 500 }}>{item}</Typography>
+                  <Typography sx={{ fontSize: '16px', mb: '6px', fontWeight: 500,cursor:'pointer' }}>{item}</Typography>
                 )
               })}
 
@@ -72,7 +74,7 @@ function Footer() {
               <Typography sx={{ fontSize: '20px', fontWeight: 700, mb: '19px' }}>Product</Typography>
               {Products.map((item) => {
                 return (
-                  <Typography sx={{ fontSize: '16px', mb: '6px', fontWeight: 500 }}>{item}</Typography>
+                  <Typography sx={{ fontSize: '16px', mb: '6px', fontWeight: 500,cursor:'pointer' }}>{item}</Typography>
                 )
               })}
 
@@ -84,27 +86,27 @@ function Footer() {
               <Typography sx={{ fontSize: '20px', fontWeight: 700, mb: '19px' }}>Reach Us</Typography>
               <Box2>
                 <MailIcon sx={{ fontSize: '28px' }} />
-                <Typography sx={{ fontSize: '16px', fontWeight: 500 }}>info@parkqwik.com</Typography>
+                <Typography sx={{ fontSize: '16px', fontWeight: 500,cursor:'pointer' }} onClick={(e) => window.location.href = 'mailto:hr@parkqwik.com'}>info@parkqwik.com</Typography>
               </Box2>
               <Box2 sx={{ mt: '10px' }}>
                 <PhoneIcon sx={{ fontSize: '28px' }} />
-                <Typography sx={{ fontSize: '16px', fontWeight: 500 }}>+91 842 842 88 33</Typography>
+                <Typography sx={{ fontSize: '16px', fontWeight: 500,cursor:'pointer' }}>+91 842 842 88 33</Typography>
               </Box2>
               <Box2 sx={{ mt: '10px' }}>
                 <FmdGoodIcon sx={{ fontSize: '28px' }} />
-                <Typography sx={{ fontSize: '16px', width: '274px', fontWeight: 500 }}>Level 7, IIFL Towers, 143, MGR Main Road, Perungudi, Chennai - 96.</Typography>
+                <Typography sx={{ fontSize: '16px', width: '274px', fontWeight: 500,cursor:'pointer' }}>Level 7, IIFL Towers, 143, MGR Main Road, Perungudi, Chennai - 96.</Typography>
               </Box2>
             </Stack>
           </Grid>
         </Grid>
 
-        {/* ------------address-----------*/}
+        {/* --------------------------------address-------------------------*/}
         <Box >
 
           <Typography sx={{ fontSize: '22px', fontWeight: 500, textAlign: 'center',my:3}}>Our Office Address</Typography>
           <Grid container spacing={3} justifyContent={'center'}>
-            <Grid item lg={4}>
-              <Accordion sx={{ width: '330px', color: '#1A9E75', bgcolor: '#ffff', borderRadius:'15px' }}>
+            <Grid item lg={3}>
+              <Accordion sx={{ width: '284px', color: '#1A9E75', bgcolor: '#ffff', borderRadius:'15px' }}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
@@ -116,11 +118,11 @@ function Footer() {
                   <Typography>
                     IIFL TOWERS, Level 7, 143, MGR Main Road, Kandhanchavadi, Chennai, Tamil Nadu - 600 096.
                   </Typography>
-                  <Divider variant="middle" sx={{ my: 2 }} />
+                  <Divider variant="middle" sx={{ my: 2,color:'#1A9E75' }} />
                   <Typography>
                     Rayala Towers, Mount Road, Anna Salai, Chennai, Tamil Nadu- 600 002.
                   </Typography>
-                  <Divider variant="middle" sx={{ my: 2 }} />
+                  <Divider variant="middle" sx={{ my: 2,color:'#1A9E75' }} />
                   <Typography>
                     Adityaram Nagar, 129, Sea Horse Inn, 8th cross, 12th street, Chennai, Tamil Nadu 600 119.
                   </Typography>
@@ -128,8 +130,8 @@ function Footer() {
               </Accordion>
             </Grid>
 
-            <Grid item lg={4}>
-              <Accordion sx={{ width: '330px', color: '#1A9E75', bgcolor: '#ffff', borderRadius:'15px' }}>
+            <Grid item lg={3}>
+              <Accordion sx={{ width: '284px', color: '#1A9E75', bgcolor: '#ffff', borderRadius:'15px' }}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
@@ -141,7 +143,7 @@ function Footer() {
                   <Typography>
                     1537, 5th Main Road, Rajiv Gandhi Nagar, 7th Sector, HSR Layout, Bengaluru, Karnataka 560 102.
                   </Typography>
-                  <Divider variant="middle" sx={{ my: 2 }} />
+                  <Divider variant="middle" sx={{ my: 2,color:'#1A9E75' }} />
                   <Typography>
                     150, 1, Infantry Road, Opp. Commissioner office, Vasanth Nagar, Bengaluru, Karnataka 560 001.
                   </Typography>
@@ -150,8 +152,26 @@ function Footer() {
             </Grid>
 
 
-            <Grid item lg={4}>
-              <Accordion sx={{ width: '330px', color: '#1A9E75', bgcolor: '#ffff', borderRadius:'15px' }}>
+            <Grid item lg={3}>
+              <Accordion sx={{ width: '284px', color: '#1A9E75', bgcolor: '#ffff', borderRadius:'15px' }}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography sx={{fontWeight:500}}>Mumbai Office</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                  AK Estate, Off Veer 
+Savarkar Flyover, Besides Radisson Blu Hotel, Swami Vivekananda Road, Goregaon West, Mumbai, Maharashtra 400062.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Grid>
+
+            <Grid item lg={3}>
+              <Accordion sx={{ width: '284px', color: '#1A9E75', bgcolor: '#ffff', borderRadius:'15px' }}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
@@ -166,6 +186,7 @@ function Footer() {
                 </AccordionDetails>
               </Accordion>
             </Grid>
+
           </Grid>
         </Box>
         <Box sx={{mt:'46px',mb:'15px',display:'flex',alignItem:'center',justifyContent:'center'}}>
