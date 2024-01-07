@@ -27,7 +27,7 @@ function Parking() {
   return (
     <>
       <Container>
-        <Grid container spacing={3} mt={2}>
+        <Grid container spacing={3} mt='75px'>
           <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box maxWidth={'550px'} width={'100%'} height={'auto'}>
               <Typography variant='h3'>Revolutionize Your Parking Journey with Our Expertise</Typography>
@@ -44,7 +44,7 @@ function Parking() {
           </Grid>
           <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box>
-              <img src='/images/car-parking.svg' width={'100%'} height={'auto'}/>
+              <img src='/images/car-parking.svg' alt='image' width={'100%'} height={'auto'}/>
             </Box>
           </Grid>
         </Grid>
@@ -75,7 +75,7 @@ function Parking() {
             </Grid>
             <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <Box>
-                <img src='/images/car-location.png' width={'100%'} height={'auto'} />
+                <img src='/images/car-location.png' alt='image' width={'100%'} height={'auto'} />
               </Box>
             </Grid>
           </Grid>
@@ -84,7 +84,7 @@ function Parking() {
           <Grid container spacing={3} sx={{ flexWrap: 'wrap-reverse',mt:4 }}>
             <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <Box>
-                <img src='/images/car-ev-charge.png' width={'100%'} height={'auto'} />
+                <img src='/images/car-ev-charge.png' alt='image' width={'100%'} height={'auto'} />
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -112,7 +112,7 @@ function Parking() {
             </Grid>
             <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <Box>
-                <img src='/images/car-valet-parking.png' width={'100%'} height={'auto'} />
+                <img src='/images/car-valet-parking.png' alt='image' width={'100%'} height={'auto'} />
               </Box>
             </Grid>
           </Grid>

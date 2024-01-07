@@ -25,7 +25,8 @@ function Careers() {
           height: '448px',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          mt:'63px',
         }}>
         <Box textAlign={'center'} sx={{ mt: '88px' }}>
           <Typography variant='h4'>Careers at ParkQwik</Typography>

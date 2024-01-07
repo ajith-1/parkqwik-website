@@ -24,7 +24,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   alignItems: 'center',
   padding: theme.spacing(0, 1),
   ...theme.mixins.toolbar,
-  justifyContent: 'flex-end',
+  justifyContent: 'flex-start',
 }));
 
 const NavBar = () => {
@@ -57,7 +57,7 @@ const NavBar = () => {
 
   return (
     <React.Fragment>
-      <AppBar position="static" width='100%' sx={{ bgcolor: 'white' }}>
+      <AppBar position="fixed" width='100%' sx={{ bgcolor: 'white' }}>
         <Toolbar>
           <Box sx={{ flexGrow: 1, flexWrap: 'nowrap' }}>
             <img className='logo1' src='/images/logo-1.png' />
@@ -101,7 +101,7 @@ const NavBar = () => {
 
       {/* --------------------Drawer for mobile view-------------------- */}
 
-      <Drawer anchor="right" open={openDrawer} onClose={handleDrawerClose} >
+      <Drawer anchor="right" width='50%' open={openDrawer} onClose={handleDrawerClose} >
         <DrawerHeader>
           <IconButton color="inherit"
             aria-label="close drawer"

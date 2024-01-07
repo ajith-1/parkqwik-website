@@ -33,7 +33,6 @@ const Carousel = ({item,color}) => {
   
 
   const settings = {
-    className: "center",
     infinite: true,
     slidesToShow: 6,
     swipeToSlide: true,

@@ -36,6 +36,7 @@ function Product() {
         sx={{
           backgroundImage: "url('/images/product-hero-banner.png')",
           height: '448px',
+          mt:'63px',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat'
@@ -69,10 +70,10 @@ function Product() {
           <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Stack direction={'row'}>
               <Box>
-                <img src='/images/phone-front.png' className='phoneImg' width='100%' maxWidth='281px' height='auto'></img>
+                <img src='/images/phone-front.png' alt='image' className='phoneImg' width='100%' maxWidth='281px' height='auto'></img>
               </Box>
               <Box sx={{ mt: '-30px', ml: '-40px' }}>
-                <img src='/images/phone-side.png' className='phoneImg2' width='100%' maxWidth='234px' height='auto'></img>
+                <img src='/images/phone-side.png' alt='image' className='phoneImg2' width='100%' maxWidth='234px' height='auto'></img>
               </Box>
             </Stack>
           </Grid>
@@ -93,7 +94,7 @@ function Product() {
           <Grid container spacing={3}>
             <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <Box>
-                <img src='/images/fastag-car.png' width={'100%'} height={'auto'} />
+                <img src='/images/fastag-car.png' alt='image' width={'100%'} height={'auto'} />
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -117,7 +118,7 @@ function Product() {
           </Grid>
           <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box>
-              <img src='/images/towing.png' width={'100%'} height={'auto'} />
+              <img src='/images/towing.png' alt='image' width={'100%'} height={'auto'} />
             </Box>
           </Grid>
         </Grid>

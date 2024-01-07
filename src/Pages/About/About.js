@@ -27,7 +27,8 @@ function About() {
           height: '448px',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          mt:'63px'
         }}>
         <Box textAlign={'center'} color={'#ffff'} sx={{ mt: '-98px' }}>
           <Typography variant='h4'>ParkQwik is India&apos;s No1 General & EV Parking Marketplace</Typography>
@@ -49,10 +50,9 @@ function About() {
           backgroundImage: "url('/images/parkqwik.png')",
           p: 2,
           height: '323px',
-          width: '95%',
-          // witdh:'100%', 
+          width: '90%',
           backgroundPosition: 'center',
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
           mt: 6,
         }}>
@@ -64,7 +64,7 @@ function About() {
       <BoxStyle sx={{ mt: '87px', flexDirection: 'column' }} >
         <Typography variant='h3'>Media Mentions</Typography>
         <Box sx={{ alignSelf: 'flex-start', ml: '10%', mt: '23px' }}>
-          <img src='/images/quotes.svg' width={'60px'} height={'60px'} />
+          <img src='/images/quotes.svg' alt='image' width={'60px'} height={'60px'} />
         </Box>
         <BoxStyle sx={{ flexWrap: 'wrap', mt: 1 }}>
           {Media.map((item) => {
@@ -73,7 +73,7 @@ function About() {
                 key={item.id}
                 sx={{ m: 2, width: '324px', height: '340px', p: 1, borderRadius: '10px', flexDirection: 'column', boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px', }}>
                 <Box sx={{ ml: '70%' }}>
-                  <img src={item.image} />
+                  <img src={item.image} alt='image' />
                 </Box>
                 <Typography variant='h6' sx={{ mt: '14px' }}>
                   {item.title}

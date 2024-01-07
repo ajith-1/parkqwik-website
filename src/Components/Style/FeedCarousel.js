@@ -37,7 +37,6 @@ const FeedCarousel = () => {
     slidesToScroll:1,
     swipeToSlide: true,
     slidesToScroll:1,
-    className:'center',
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -52,8 +51,6 @@ const FeedCarousel = () => {
         settings: {
           initialSlide:1,
           slidesToShow: 1,
-          centerMode:true,
-          centerPadding:'-10px'
         },
       },
      

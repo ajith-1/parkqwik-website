@@ -25,6 +25,7 @@ function Careers() {
         sx={{
           backgroundImage: "url('/images/career-hero-banner.png')",
           height: '370px',
+          mt:'63px',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat'
