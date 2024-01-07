@@ -18,9 +18,9 @@ export default function Video() {
             >
                 <div className="videoThumbnail" >
                     <img className='videoImg'
-                        src='/images/customer-image.png'
+                        src='/images/customer-image.png' alt='Product'
                     />
-                    <img className='button play' src='/images/play.png' />
+                    <img className='button play' src='/images/play.png' alt='Product' />
                 </div>
             </div>
 
@@ -45,7 +45,7 @@ const VideoPopup = ({ show, setShow }) => {
             <div className="opacityLayer" onClick={hidePopup}></div>
             <div className="videoPlayer">
                 <span className="closeBtn" onClick={hidePopup}>
-                    <img className='button close' src='/images/close.png' />
+                    <img className='button close' src='/images/close.png' alt='Product'/>
                 </span>
                 <ReactPlayer
                     url={`https://youtu.be/5KiF3X17ams?si=OS_zVFiHpLA7DSQj`}

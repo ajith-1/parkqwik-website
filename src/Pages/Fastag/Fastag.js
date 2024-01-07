@@ -57,7 +57,7 @@ function Fastag() {
             </Grid>
             <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <Box>
-                <img src='/images/mobile.png' alt='image' width={'100%'} height={'auto'} />
+                <img src='/images/mobile.png' alt='Product' width={'100%'} height={'auto'} />
               </Box>
             </Grid>
           </Grid>
@@ -66,7 +66,7 @@ function Fastag() {
           <Grid container spacing={3} sx={{ flexWrap: 'wrap-reverse', mt: 8 }}>
             <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <Box>
-                <img src='/images/fastag-card.png' alt='image' width={'100%'} height={'auto'} />
+                <img src='/images/fastag-card.png' alt='Product' width={'100%'} height={'auto'} />
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -94,7 +94,7 @@ function Fastag() {
             </Grid>
             <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <Box>
-                <img src='/images/toll.png' alt='image' width={'100%'} height={'auto'} />
+                <img src='/images/toll.png' alt='Product' width={'100%'} height={'auto'} />
               </Box>
             </Grid>
           </Grid>

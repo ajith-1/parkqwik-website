@@ -41,8 +41,8 @@ function Footer() {
           <Grid item xs={12} sm={6} md={3} >
             <Stack direction={'column'}>
               <Stack direction={'row'}>
-                <img src='/images/logo-2.svg' />
-                <img src='/images/name-logo-2.svg' />
+                <img src='/images/logo-2.svg' alt='logo' />
+                <img src='/images/name-logo-2.svg' alt='logo'/>
               </Stack>
               <Typography sx={{ fontSize: '16px', mt: '19px', width: '220px', fontWeight: 500 }}>The Complete Parking App and Car Services Solution</Typography>
               <Typography sx={{ fontSize: '20px', mt: '15px', fontWeight: 700 }}>Follow us</Typography>

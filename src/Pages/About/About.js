@@ -64,7 +64,7 @@ function About() {
       <BoxStyle sx={{ mt: '87px', flexDirection: 'column' }} >
         <Typography variant='h3'>Media Mentions</Typography>
         <Box sx={{ alignSelf: 'flex-start', ml: '10%', mt: '23px' }}>
-          <img src='/images/quotes.svg' alt='image' width={'60px'} height={'60px'} />
+          <img src='/images/quotes.svg' alt='Product' width={'60px'} height={'60px'} />
         </Box>
         <BoxStyle sx={{ flexWrap: 'wrap', mt: 1 }}>
           {Media.map((item) => {
@@ -73,7 +73,7 @@ function About() {
                 key={item.id}
                 sx={{ m: 2, width: '324px', height: '340px', p: 1, borderRadius: '10px', flexDirection: 'column', boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px', }}>
                 <Box sx={{ ml: '70%' }}>
-                  <img src={item.image} alt='image' />
+                  <img src={item.image} alt='Product' />
                 </Box>
                 <Typography variant='h6' sx={{ mt: '14px' }}>
                   {item.title}

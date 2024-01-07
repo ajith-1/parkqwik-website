@@ -1,6 +1,6 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import './Home.css';
-import { BoxStyle,Heading } from '../../Components/Style/Style';
+import { BoxStyle, Heading } from '../../Components/Style/Style';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -19,9 +19,9 @@ import Download from '../../Components/Style/Download';
 
 function Home() {
 
-  useEffect(()=>{
-    window.scroll(0,0);
-  },[])
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [])
 
   return (
     <>
@@ -37,15 +37,15 @@ function Home() {
           </Grid>
           <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box>
-              <img src='/images/wavy-bus.png' alt='image' width='100%' maxWidth='382px' height='auto'></img>
+              <img src='/images/wavy-bus.png' alt='Product' width='100%' maxWidth='382px' height='auto'></img>
             </Box>
           </Grid>
         </Grid>
 
         {/* ----------------our products----------------------- */}
         <BoxStyle sx={{ mt: '87px', flexDirection: 'column' }}>
-          <Heading sx={{mb:'40px'}}>Our Products</Heading>
-          <Carousel item={Products} color={'#202020'}/>
+          <Heading sx={{ mb: '40px' }}>Our Products</Heading>
+          <Carousel item={Products} color={'#202020'} />
         </BoxStyle>
 
         {/*--------------------Park easy------------------------  */}
@@ -76,9 +76,9 @@ function Home() {
 
         <BoxStyle sx={{ mt: '93px', flexDirection: 'column' }}>
           <Heading>How it works</Heading>
-          <Box  sx={{ mt: '59px', gap: '15px',display:'flex', alignItem: 'center', justifyContent: 'space-evenly', flexWrap: 'wrap', '@media(max-width:890px)': {flexDirection:'column'}}}>
+          <Box sx={{ mt: '59px', gap: '15px', display: 'flex', alignItem: 'center', justifyContent: 'space-evenly', flexWrap: 'wrap', '@media(max-width:890px)': { flexDirection: 'column' } }}>
             <BoxStyle sx={{ flexDirection: 'column' }}>
-              <img src='/images/location.svg' alt='image'/>
+              <img src='/images/location.svg' alt='Product' />
               <Typography variant='h6' maxWidth={'296px'} sx={{ mt: 3, textAlign: 'center', width: '100%' }}>You’ll receive directions to the space and information on how to access</Typography>
             </BoxStyle>
             <BoxStyle className='arrow'>
@@ -87,7 +87,7 @@ function Home() {
               </svg>
             </BoxStyle>
             <BoxStyle sx={{ flexDirection: 'column' }}>
-              <img src='/images/notification.svg' alt='image'/>
+              <img src='/images/notification.svg' alt='Product' />
               <Typography variant='h6' maxWidth={'296px'} sx={{ mt: 3, textAlign: 'center' }}>The space owner/car park is notified of your booking</Typography>
             </BoxStyle>
             <BoxStyle className='arrow'>
@@ -96,7 +96,7 @@ function Home() {
               </svg>
             </BoxStyle>
             <BoxStyle sx={{ flexDirection: 'column' }}>
-              <img src='/images/car-garage.svg' alt='image'/>
+              <img src='/images/car-garage.svg' alt='Product' />
               <Typography variant='h6' maxWidth={'296px'} sx={{ mt: 3, textAlign: 'center', width: '100%' }}>Just turn up, park your vehicle and get on with your day!</Typography>
             </BoxStyle>
           </Box>
@@ -109,17 +109,21 @@ function Home() {
             <Box maxWidth={'550px'} width={'100%'} height={'auto'}>
               <Typography variant='h3'>Find and Reserve Parking Anywhere</Typography>
               <Typography variant='h6' my={2}>Easily find nearby parking spaces by entering your address or selecting your location</Typography>
-              <Stack direction={'row'} sx={{ mt: 3 }} gap={'20px'}>
-                <TextField sx={{ maxWidth: '420px', height: '75px' }} id="outlined-search" label="Enter your location" color='success' type="search" />
-                <Button variant="contained" color='success' sx={{maxWidth: '142px', height: '55px',fontSize:'20px' }} startIcon={<SearchIcon  />}>
-              Search
-            </Button>
-              </Stack>
+              <Grid container sx={{ mt: 3 }} spacing={2} >
+                <Grid item xs={12} sm={12} md={8} >
+                  <TextField sx={{ width: '100%', height: '75px' }} id="outlined-search" label="Enter your location" color='success' type="search" />
+                </Grid>
+                <Grid item xs={12} sm={12} md={4} >
+                  <Button variant="contained" color='success' sx={{ width: '100%', height: '55px', fontSize: '18px' }} startIcon={<SearchIcon />}>
+                    Search
+                  </Button>
+                </Grid>
+              </Grid>
             </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box>
-              <img src='/images/map.svg' alt='image' width='100%' maxWidth='500' height='auto'></img>
+              <img src='/images/map.svg' alt='Product' width='100%' maxWidth='500' height='auto'></img>
             </Box>
           </Grid>
         </Grid>
@@ -127,13 +131,13 @@ function Home() {
 
         <BoxStyle sx={{ mt: '100px', flexDirection: 'column' }}>
           <Heading>Our Happy Customers</Heading>
-            <FeedCarousel/>
+          <FeedCarousel />
         </BoxStyle>
 
         {/* --------------------Download------------------------ */}
 
         <Box>
-      <Download  sx={{mt:'154px'}}/>
+          <Download sx={{ mt: '154px' }} />
         </Box>
         {/* ---------------------FAQ--------------------- */}
 

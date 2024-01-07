@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Feedback } from '../../Assests/Data';
 import Cards from './Cards';
+import Box from '@mui/material/Box';
 
 
 function SampleNextArrow(props) {
@@ -32,9 +33,9 @@ function SamplePrevArrow(props) {
 const FeedCarousel = () => {
 
   const settings = {
+
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll:1,
     swipeToSlide: true,
     slidesToScroll:1,
     nextArrow: <SampleNextArrow />,
@@ -47,25 +48,27 @@ const FeedCarousel = () => {
         },
       },
       {
-        breakpoint: 650,
+        breakpoint: 670,
         settings: {
-          initialSlide:1,
-          slidesToShow: 1,
-        },
+          slidesToShow: 1, 
+          initialSlide:0,
+         },
       },
      
     ],
   };
   return (
-    <Container>
+    <Box maxWidth={'100%'}>
       <Slider {...settings}>
         {Feedback.map((item) => {
           return (
+          <Box key={item.id}>
             <Cards item={item} />
+          </Box>
           )
         })}
       </Slider>
-    </Container>
+    </Box>
   );
 };
 

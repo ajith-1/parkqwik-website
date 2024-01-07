@@ -55,7 +55,7 @@ function OurProduct({data}){
                       <Typography variant='h4' sx={{ bgcolor: '#1B9E76', color: '#ffff', p: 1, borderRadius: '50%' }}>0{item.id}</Typography>
                     </Box1>
                     <Stack direction='row' gap='15px' mt={'47px'} >
-                      <img src={item.image} alt='image' />
+                      <img src={item.image} alt='Product' />
                       <Stack direction='column'>
                         <Text>{item.title}</Text>
                         <Text2>{item.info}</Text2>

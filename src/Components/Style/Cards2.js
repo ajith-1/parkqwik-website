@@ -27,7 +27,7 @@ function Cards2({ item, color }) {
   return (
     <>
       <CardBox className='card'>
-        <img src={item.image} alt='image' width={'96px'} height={'54px'} />
+        <img src={item.image} alt='Product' width={'96px'} height={'54px'} />
         <Typography textAlign={'center'} sx={{ color: { color }, fontWeight: 500 }}>{item.name}</Typography>
       </CardBox>
     </>

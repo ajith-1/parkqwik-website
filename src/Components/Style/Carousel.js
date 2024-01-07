@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Cards2 from './Cards2';
@@ -82,7 +83,9 @@ const Carousel = ({item,color}) => {
      <Slider {...settings}>
       {item.map((item) =>{
         return(
-          <Cards2 item={item} color={color}/>
+          <Box key={item.id}>
+            <Cards2 item={item} color={color}/>
+          </Box>
         )
         })}
     </Slider>

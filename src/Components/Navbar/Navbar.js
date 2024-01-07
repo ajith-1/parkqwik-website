@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import { useNavigate, Link, useLocation } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -11,7 +11,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { styled, useTheme } from '@mui/material/styles';
+import { styled} from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { Phone } from '@mui/icons-material';
@@ -60,8 +60,8 @@ const NavBar = () => {
       <AppBar position="fixed" width='100%' sx={{ bgcolor: 'white' }}>
         <Toolbar>
           <Box sx={{ flexGrow: 1, flexWrap: 'nowrap' }}>
-            <img className='logo1' src='/images/logo-1.png' />
-            <img className='logo2' src='/images/name-logo-1.png' />
+            <img className='logo1' src='/images/logo-1.png' alt='logo'/>
+            <img className='logo2' src='/images/name-logo-1.png' alt='logo'/>
           </Box>
           {isMobile ? (
             <IconButton
@@ -80,7 +80,7 @@ const NavBar = () => {
                   <li
                     key={index}
                     onClick={() => navigate(item.path)}
-                    className={location.pathname == item.path ? 'active' : 'listName'}
+                    className={location.pathname === item.path ? 'active' : 'listName'}
                   >
                     {item.text}
                   </li>
@@ -114,7 +114,7 @@ const NavBar = () => {
             <ListItem key={index} onClick={() => { navigate(item.path); setOpenDrawer(false); }}>
               <ListItemText
                 primary={item.text}
-                className={location.pathname == item.path ? 'activeList' : 'drawerList'}
+                className={location.pathname === item.path ? 'activeList' : 'drawerList'}
               />
             </ListItem>
           ))}

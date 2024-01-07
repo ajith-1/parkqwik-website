@@ -24,7 +24,7 @@ function Download() {
                 <Grid item xs={12} sm={12} md={6}>
                   <Button disableElevation >
                   <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', width: '192px', height: '68px', borderRadius: '10px', bgcolor: '#292929', color: '#ffff' }}>
-                    <img src='/images/playstore-logo.svg' />
+                    <img src='/images/playstore-logo.svg' alt='Product' />
                     <Stack direction={'column'}>
                       <Typography variant='body1' sx={{ fontSize: '12px' }}>Get it on</Typography>
                       <Typography variant='body1' sx={{ fontSize: '18px' }}>Google Play</Typography>
@@ -35,7 +35,7 @@ function Download() {
                 <Grid item xs={12} sm={12} md={6}>
                 <Button disableElevation >
                   <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', width: '192px', height: '68px', borderRadius: '10px', bgcolor: '#292929', color: '#ffff' }}>
-                    <img src='/images/apple-logo.svg' />
+                    <img src='/images/apple-logo.svg' alt='Product'/>
                     <Stack direction={'column'}>
                       <Typography variant='body1' sx={{ fontSize: '12px' }}>Download on the</Typography>
                       <Typography variant='body1' sx={{ fontSize: '18px' }}>App Store</Typography>
@@ -51,10 +51,10 @@ function Download() {
         <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Stack direction={'row'}>
             <Box>
-              <img src='/images/app-front1.png' width='100%' maxWidth='312px' height='auto' />
+              <img src='/images/app-front1.png' alt='Product' width='100%' maxWidth='312px' height='auto' />
             </Box>
             <Box sx={{ mt: '-30px', ml: '-40px' }}>
-              <img src='/images/app-front2.png' width='100%' maxWidth='317px' height='auto' />
+              <img src='/images/app-front2.png' alt='Product' width='100%' maxWidth='317px' height='auto' />
             </Box>
           </Stack>
         </Grid>
