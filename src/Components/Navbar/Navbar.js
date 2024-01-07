@@ -28,7 +28,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 const NavBar = () => {
-  const theme = useTheme();
   const isMobile = useMediaQuery('(max-width:1155px)');
   const [openDrawer, setOpenDrawer] = React.useState(false);
   const navigate = useNavigate();
