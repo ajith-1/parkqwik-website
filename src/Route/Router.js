@@ -9,6 +9,7 @@ import Fastag from '../Pages/Fastag/Fastag';
 import Careers from '../Pages/Careers/Careers';
 import Product from '../Pages/Product/Product';
 import Contact from '../Pages/Contact/Contact';
+import Upcoming from '../Pages/Upcoming/Upcoming';
 
 function Router() {
     return (
@@ -22,6 +23,7 @@ function Router() {
                 <Route path='/careers' element={<Careers />} />
                 <Route path='/product' element={<Product />} />
                 <Route path='/contact' element={<Contact />} />
+                <Route path='/upcoming' element={<Upcoming />} />
             </Routes>
             <Footer />
         </BrowserRouter>
