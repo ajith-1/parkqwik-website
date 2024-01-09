@@ -13,7 +13,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, width: '40px', height: '40px', backgroundImage: `url(/images/next.svg)`}}
+      style={{ ...style, width: '40px', height: '40px', backgroundImage: `url(/images/next.svg)` }}
       onClick={onClick}
     />
   );
@@ -24,71 +24,79 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style,width: '40px', height: '40px', backgroundImage: `url(/images/prev.svg)`}}
+      style={{ ...style, width: '40px', height: '40px', backgroundImage: `url(/images/prev.svg)` }}
       onClick={onClick}
     />
   );
 }
 
-const Carousel = ({item,color}) => {
-  
+const Carousel = ({ item, color }) => {
+
 
   const settings = {
     infinite: true,
     slidesToShow: 6,
     swipeToSlide: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: '',
+    prevArrow: '',
     responsive: [
       {
         breakpoint: 1120,
         settings: {
-          slidesToShow:5,
+          slidesToShow: 5,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
         },
       },
       {
         breakpoint: 985,
         settings: {
           slidesToShow: 4,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
         },
       },
       {
         breakpoint: 695,
         settings: {
           slidesToShow: 3,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
         },
       },
       {
         breakpoint: 545,
         settings: {
           slidesToShow: 2,
-          nextArrow: '',
-          prevArrow: '',
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
+
         },
       },
       {
         breakpoint: 390,
         settings: {
           slidesToShow: 1,
-          nextArrow: '',
-          prevArrow: '',
-          centerMode:true,
-          centerPadding:'40px',
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
+
+          centerMode: true,
+          centerPadding: '40px',
         },
       },
     ],
   };
   return (
-    <Container >  
-     <Slider {...settings}>
-      {item.map((item) =>{
-        return(
-          <Box key={item.id}>
-            <Cards2 item={item} color={color}/>
-          </Box>
-        )
+    <Container >
+      <Slider {...settings}>
+        {item.map((item) => {
+          return (
+            <Box key={item.id}>
+              <Cards2 item={item} color={color} />
+            </Box>
+          )
         })}
-    </Slider>
+      </Slider>
     </Container>
   );
 };

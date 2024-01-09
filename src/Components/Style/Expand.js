@@ -22,7 +22,7 @@ function Expand({ data }) {
         return (
           <Accordion expanded={expanded === item.panel}
             onChange={handleChange(item.panel)}
-            sx={{ my: '20px', maWidth: '900px', backgroundColor: 'white',borderRadius:'10px'}}>
+            sx={{ my: '20px', maWidth: '900px', bgcolor: 'white',borderRadius:'10px'}}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon color='success' sx={{ fontSize: '24px' }} />}
               aria-controls="panel1bh-content"

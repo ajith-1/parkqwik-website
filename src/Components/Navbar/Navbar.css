@@ -14,7 +14,7 @@
   color:#1A9E75;
   margin:0 10px; 
   font-size: 20px; 
-  font-weight: 700; 
+  font-weight: 500; 
   padding-bottom: 3px;
   cursor: pointer;
 }
@@ -51,7 +51,7 @@
 .listName{
   margin:0 10px; 
   font-size: 20px; 
-  font-weight: 600; 
+  font-weight: 500; 
   color: #202020;
   padding-bottom: 3px;
   cursor: pointer;

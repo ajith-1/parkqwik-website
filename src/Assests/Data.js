@@ -27,34 +27,6 @@ export const Products = [
         name: 'Toll Estimator',
         image: '/images/toll-estimator.svg'
     },
-    {
-        id: 7,
-        name: 'Fastag Services',
-        image: '/images/fastag.svg'
-    },
-    {
-        id: 8,
-        name: 'Nearby Parking',
-        image: '/images/location.svg'
-    }, {
-        id: 9,
-        name: 'EV Parking',
-        image: '/images/ev-parking.svg'
-    },
-    {
-        id: 10,
-        name: 'Car Insurance',
-        image: '/images/car-insurance.svg'
-    }, {
-        id: 11,
-        name: 'Road Assistance',
-        image: '/images/road-assistance.svg'
-    }, {
-        id: 12,
-        name: 'Toll Estimator',
-        image: '/images/toll-estimator.svg'
-    },
-
 ];
 
 export const ParkingService = [
@@ -85,34 +57,6 @@ export const ParkingService = [
         name: 'Shops',
         image: '/images/supermarket-icon 1.svg'
     },
-    {
-        id: 7,
-        name: 'Workspace',
-        image: '/images/office-icon 1.svg'
-    },
-    {
-        id: 8,
-        name: 'Shoping Malls',
-        image: '/images/city-icon 1.svg'
-    }, {
-        id: 9,
-        name: 'Restaurants',
-        image: '/images/dish-spoon-knife-icon 1.svg'
-    },
-    {
-        id: 10,
-        name: 'Residential Areas',
-        image: '/images/property-icon 1.svg'
-    }, {
-        id: 11,
-        name: 'Road Assistance',
-        image: '/images/road-assistance.svg'
-    }, {
-        id: 12,
-        name: 'Shops',
-        image: '/images/supermarket-icon 1.svg'
-    },
-
 ];
 
 export const Question = [
